@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <script type="text/javascript" name="news_v01">
+      var who = [ "Atilla",
+      "Daiana",
+      "Jentl",
+      "Drilon",
+      "Daniel",
+      "Fidel",
+      "Umut",
+      "CC",
+      "Sylvia"];
+
+      var where = ["at home",
+        "at school",
+        "in the toilet",
+        "on stage",
+        "in Hitachiota, Japan",
+        "at bar",
+        "at work",
+        "at gym",
+        "in cinema",
+        "in car",
+        "on train",
+        "on Earth",
+        "at park",
+        "in dreams"];
+
+      var ving = ["watering the plants",
+        "driving",
+        "eating a pork chop",
+        "smoking weed",
+        "drinking non alcoholic beverage",
+        "playing golf",
+        "talking on the phone",
+        "reciting Shakespeare",
+        "improvising",
+        "reading book",
+        "playing cards",
+        "working out",
+        "running",
+        "solving puzzle",
+        "playing riddles",
+        "looking for trouble",
+        "looking for a private place",
+        "looking for evidence",
+        "hiding the evidence"];
+
+      var v2nd = ["it happened",
+        "it began to rain",
+        "they were caught",
+        "I saw them",
+        "they heard a noise",
+        "he came",
+        "a car approached",
+        "they got hungry",
+        "they died",
+        "the improv began",
+        "she woke up",
+        "the alarm went off",
+        "the train arrived"];
+
+      function makenews()
+      {
+        var p1 = who[Math.floor(Math.random()*who.length)];
+        var p2 = who[Math.floor(Math.random()*who.length)];
+        var wt = ving[Math.floor(Math.random()*ving.length)];
+        var wr = where[Math.floor(Math.random()*where.length)];
+        var th = v2nd[Math.floor(Math.random()*v2nd.length)];
+
+        document.getElementById("newstext").innerHTML = p1 + " and " + p2 + " were " + wt + " " + wr + " when " + th + ".";
+      }
+    </script>
+  </head>
+  <body onLoad="makenews()">
+    <h1> Breaking News! </h1>
+    <h2 id="newstext"></h2>
+    <button type="button" onclick="makenews()">Generate random scene</button>
+  </body>
+</html>
